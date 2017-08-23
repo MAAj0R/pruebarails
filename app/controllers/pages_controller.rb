@@ -8,4 +8,9 @@ class PagesController < ApplicationController
   	
   	
   end
+
+  def votos_superman
+  	redirect_to rooth_path
+  	
+  end
 end

@@ -15,22 +15,40 @@
 	width: 50%;
 	height: 400px;
 	display: inline;
-	float: right;
+	float: left;
+	
 
 }
 
 .batman {
 
-	float: left;
+	
 	display: inline;
 	height: 400px;
+
+
 }
 
 .batman img {
 
-	width: 120%;
+	width: 50%;
 	height: 400px;
-	display: inline
+	display: inline;
+	float: right;
+	
+
+	
+	
+}
+
+.votosuperman {
+
+	margin-left: 50%;
+}
+
+.votosbatman {
+
+	float: left;
 }
 
 
@@ -39,9 +57,39 @@
 <body>
 
 
-<div class="superman"> <a href="http://localhost:3000/pages/superman"><img src="<%= asset_path 'superman.jpeg' %>" alt=""></a></div>
+<div class="superman"> <a href="http://localhost:3000/pages/superman"><img src="<%= asset_path 'superman.jpeg' %>" alt=""></a>
 
-<div class="batman"> <a href="http://localhost:3000/pages/batman"><img src="<%= asset_path 'thumb-1920-82331.jpg' %>" alt=""> </a></div>
+</div>
+
+</div>
+
+
+
+<div class="batman"> <a href="http://localhost:3000/pages/batman"><img src="<%= asset_path 'thumb-1920-82331.jpg' %>" alt=""> </a> 
+
+</div>
+
+<div class="votosbatman"><%= form_tag(pages_votos_superman_path) do %>
+	<%= text_field_tag "name", nil, placeholder: "Nombre"  %> <br>
+	<%= email_field_tag "email", nil, placeholder: "Email"  %> <br> 
+	<%= submit_tag "Votar" %>
+	
+<% end -%></div>
+
+<div class="votosuperman"> <%= form_tag(pages_votos_superman_path) do %>
+	<%= text_field_tag "name", nil, placeholder: "Nombre"  %> <br>
+	<%= email_field_tag "email", nil, placeholder: "Email"  %> <br> 
+	<%= submit_tag "Votar" %>
+	
+<% end -%>
+
+
+
+
+
+
+
+
 
 
 </body>
