@@ -41,12 +41,12 @@
 	
 }
 
-.votosuperman {
+.votosbatman {
 
 	margin-left: 50%;
 }
 
-.votosbatman {
+.votosuperman {
 
 	float: left;
 }
@@ -69,14 +69,17 @@
 
 </div>
 
-<div class="votosbatman"><%= form_tag(pages_votos_superman_path) do %>
-	<%= text_field_tag "name", nil, placeholder: "Nombre"  %> <br>
-	<%= email_field_tag "email", nil, placeholder: "Email"  %> <br> 
+<div class="votosuperman"><%= form_tag(pages_votos_superman_path) do %>
+	<%= text_field_tag "votosuperman", nil, placeholder: "Nombre"  %> <br>
+	<%= email_field_tag "votosbatman", nil, placeholder: "Email"  %> <br> 
 	<%= submit_tag "Votar" %>
-	
-<% end -%></div>
 
-<div class="votosuperman"> <%= form_tag(pages_votos_superman_path) do %>
+	<div class="notice"> <%= notice %></div>
+	
+<% end -%>
+</div>
+
+<div class="votosbatman"> <%= form_tag(pages_votos_batman_path) do %>
 	<%= text_field_tag "name", nil, placeholder: "Nombre"  %> <br>
 	<%= email_field_tag "email", nil, placeholder: "Email"  %> <br> 
 	<%= submit_tag "Votar" %>
