@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+	
+.superman {
+
+	display: inline;
+
+}
+
+.superman img {
+
+	width: 50%;
+	height: 400px;
+	display: inline;
+	float: right;
+
+}
+
+.batman {
+
+	float: left;
+	display: inline;
+	height: 400px;
+}
+
+.batman img {
+
+	width: 120%;
+	height: 400px;
+	display: inline
+}
+
+
+</style>
+</head>
+<body>
+
+
+<div class="superman"> <a href="http://localhost:3000/pages/superman"><img src="<%= asset_path 'superman.jpeg' %>" alt=""></a></div>
+
+<div class="batman"> <a href="http://localhost:3000/pages/batman"><img src="<%= asset_path 'thumb-1920-82331.jpg' %>" alt=""> </a></div>
+
+
+</body>
+</html> 
